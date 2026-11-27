@@ -1244,6 +1244,6 @@ UCLA Statistical Methods and Data Analytics. *Introduction to Structural Equatio
 
 # Appendix: Reproducibility and Publication Links
 
-- GitHub Repository
+- [GitHub Repository](https://github.com/Sheilaaa0312/M15_Case31_Structural_Model)
 
-- GitHub Pages
+- [GitHub Pages](https://sheilaaa0312.github.io/M15_Case31_Structural_Model/M15_Case31_Structural_Model.html)
