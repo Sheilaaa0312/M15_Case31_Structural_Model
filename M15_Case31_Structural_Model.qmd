@@ -1,0 +1,1249 @@
+---
+title: "M15: Structural Model and Hypothesis Testing with Case 31"
+subtitle: "Employees Federal Credit Union"
+author: "Xueying Luo"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    number-sections: true
+    embed-resources: true
+    code-copy: true
+    code-fold: true
+    code-summary: "Show R code"
+    page-layout: full
+execute:
+  echo: true
+  message: false
+  warning: true
+editor: source
+---
+
+# Purpose and Case Context
+
+Employees Federal Credit Union (EFCU) conducted a survey to better understand its members' borrowing behavior and their evaluations of employees, financial services, management, and operations.
+
+In my previous Case 31 assignments, I examined these topics separately using descriptive statistics, reliability analysis, factor analysis, ANOVA, and regression. This assignment brings several of these relationships together using structural equation modeling (SEM).
+
+I am particularly interested in whether members' evaluations of employees are associated with their perceptions of loan-processing promptness and overall managerial and operational efficiency.
+
+Rather than automatically using both latent constructs proposed in the assignment, I first review my M13 measurement assessment. Following Dr. Jung's additional clarification, the measurement results guide which constructs and individual items are included in the structural model.
+
+# Learning Notes: Structural Equation Modeling
+
+## Measurement and Structural Models
+
+SEM combines two components:
+
+- The measurement model describes how observed indicators measure latent constructs.
+- The structural model describes the relationships among latent and observed variables.
+
+For example, employee proficiencies cannot be directly measured through one overall observation. In Case 31, members evaluate employee courtesy, helpfulness, professionalism, and availability through four questionnaire items. Together, these items are intended to measure the underlying construct.
+
+The structural model then allows me to examine how employee proficiencies relate to other variables, such as processing promptness and overall efficiency.
+
+One important lesson from the SEM materials is that statistically significant structural coefficients do not necessarily indicate that the constructs are measured well.
+
+## Two-Step Approach
+
+Anderson and Gerbing (1988) recommend a two-step approach:
+
+1.  Assess the measurement model.
+2.  Examine structural relationships after establishing an acceptable measurement model.
+
+The first step focuses on factor loadings, reliability, convergent validity, discriminant validity, and overall model fit. The second step examines the proposed relationships, their statistical significance, and the overall fit of the combined model.
+
+Dr. Jung's clarification is particularly relevant to Case 31. If one of the proposed latent constructs does not demonstrate sufficient measurement quality, an individual item may be selected based on theoretical relevance and empirical evidence.
+
+When only one item is retained, it should be treated as an observed variable rather than a latent construct.
+
+## Direct, Indirect, and Total Effects
+
+The instructor's Realistic Ads Project provides an example of how SEM can examine direct and indirect relationships within the same model.
+
+In that project, civic consciousness is proposed as a mediator between need for cognition or social community engagement and attitudes toward buying brands that use realistic advertisements.
+
+For Case 31, I examine a similar type of relationship using employee proficiencies, loan-processing promptness, and overall managerial and operational efficiency.
+
+- Direct effect: The relationship between employee proficiencies and overall efficiency after accounting for processing promptness.
+- Indirect effect: The relationship between employee proficiencies and overall efficiency through processing promptness.
+- Total effect: The combination of the direct and indirect effects.
+
+The indirect effect is calculated as:
+
+$$
+\text{Indirect effect} = a \times b
+$$
+
+The total effect is calculated as:
+
+$$
+\text{Total effect} = c' + ab
+$$
+
+Here, $a$ represents the relationship between employee proficiencies and processing promptness, $b$ represents the relationship between processing promptness and overall efficiency, and $c'$ represents the direct relationship between employee proficiencies and overall efficiency.
+
+## Mediation and Moderation
+
+Mediation examines whether a relationship operates through an intermediate variable, while moderation examines whether the strength or direction of a relationship changes depending on another variable.
+
+In the instructor's Realistic Ads Project, civic consciousness is proposed as a mediator. Age and civic consciousness are also examined as potential moderators of selected relationships.
+
+The supplemental lecture introduces simple slopes, the Johnson–Neyman technique, factor scores, and product indicators as approaches to examining moderation.
+
+For my Case 31 model, I focus on direct and indirect relationships. Although the original case includes an interaction between current loan status and residence, that hypothesis concerns service adequacy (Q33), which is not the outcome of my proposed model.
+
+Because the Case 31 survey is cross-sectional, the indirect effect should be interpreted as an association rather than evidence of causal mediation.
+
+# Case 31 Hypotheses and Model Rationale
+
+## Review of Relevant Research Questions and Hypotheses
+
+| Research question or hypothesis | Main focus |
+|:---|:---|
+| R3 | Members' attitudes toward employee proficiencies |
+| R4a | Differences in employee evaluations by residence |
+| R4b | Differences in service awareness by residence |
+| R4c | Differences in operational evaluations by residence |
+| R6 | Members' attitudes toward operational effectiveness |
+| H1 | Regular share account awareness and service adequacy |
+| H2 | Comparison of loan-rate evaluations |
+| H3a–H3b | Loan status and residence interaction on service adequacy |
+| H4 | Differences in loan-rate evaluations by loan status |
+| H5a | Confidentiality and overall efficiency |
+| H5b | Loan-processing promptness and overall efficiency |
+| H5c | Service adequacy and overall efficiency |
+| H5d | Application simplicity and overall efficiency |
+
+Some hypothesis labels in the M15 instructions differ from those in the original Case 31 hypothesis assignment key. I follow the original key to maintain consistency with my previous analyses.
+
+The current model focuses on R3, selected aspects of R4 and R6, and H5b.
+
+## Connection with Previous Analyses
+
+My previous H5a–H5d multiple regression analysis examined how four operational characteristics relate to overall managerial and operational efficiency.
+
+| Hypothesis | Predictor                    | Standardized coefficient | p-value |
+|:---------------|:---------------------|-----------------:|:---------------|
+| H5a        | Confidentiality (Q31)        |                     .188 | .036    |
+| H5b        | Processing promptness (Q32)  |                     .308 | \< .001 |
+| H5c        | Service adequacy (Q33)       |                     .294 | \< .001 |
+| H5d        | Application simplicity (Q34) |                    -.068 | .390    |
+
+H5a, H5b, and H5c were supported in the previous regression analysis, while H5d was not.
+
+I am interested in examining whether the positive relationship between processing promptness and overall efficiency remains significant when employee proficiencies are introduced into the model.
+
+The two analyses contain different predictors, so their coefficients are not expected to be identical.
+
+## Proposed Structural Relationships
+
+Members who receive helpful and professional assistance from employees may also perceive loan applications as being processed more promptly. This provides a reason to examine the relationship between employee proficiencies and Q32.
+
+I also expect employee evaluations to relate directly to overall efficiency because members' interactions with employees may contribute to their general impression of the credit union, regardless of loan-processing speed.
+
+The relationship between Q32 and Q37r follows H5b in the original Case 31 hypothesis table.
+
+Residence is included because R4 examines whether members living in the headquarters area evaluate the credit union differently from those living elsewhere. Current loan status is included because members with and without current loans may have different experiences with the credit union's services.
+
+## Hypotheses and Planned Tests
+
+| Hypothesis or research question | Predictor | Outcome | Variable type | Expected relationship | Planned test |
+|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
+| P1 | Employee proficiencies | Q32 | Latent to observed | Positive | Structural path (a) |
+| H5b | Q32 | Q37r | Observed to observed | Positive | Structural path (b) |
+| P2 | Employee proficiencies | Q37r | Latent to observed | Positive | Direct effect (c') |
+| P3 | Employee proficiencies through Q32 | Q37r | Indirect relationship | Positive | Indirect effect (a × b) |
+| R4a | Residence | Employee proficiencies | Observed to latent | Non-directional | Structural path |
+| R4c | Residence | Q32 | Observed to observed | Non-directional | Structural path |
+| Extension of R4c | Residence | Q37r | Observed to observed | Non-directional | Structural path |
+| Control | Loan status | Q32 | Observed to observed | Non-directional | Structural path |
+| Control | Loan status | Q37r | Observed to observed | Non-directional | Structural path |
+
+P1, P2, and P3 are additional propositions developed for this integrated model, rather than original numbered Case 31 hypotheses.
+
+The residence-related paths address selected aspects of R4. The remaining hypotheses are not directly tested in the primary SEM because they concern different outcomes, predictors, or research designs.
+
+# Constructs, Indicators, and Variable Roles
+
+## Original Measurement Specification
+
+The M13 measurement assessment examined two latent constructs.
+
+| Construct                 | Indicators                             |
+|:--------------------------|:---------------------------------------|
+| Employee proficiencies    | Q3, Q4, Q5, Q6                         |
+| Operational effectiveness | Q9r, Q10, Q11, Q12, Q31, Q32, Q33, Q34 |
+
+The employee-proficiency items describe similar aspects of members' interactions with employees and use the same agreement scale.
+
+The operational items are more diverse. They cover statement frequency, accuracy, confidentiality, loan-processing promptness, service adequacy, and application simplicity.
+
+A member may be satisfied with the confidentiality of financial information but dissatisfied with loan-processing speed. These characteristics are all relevant to operations, but they may not necessarily measure the same underlying attitude.
+
+## Revised Measurement Specification
+
+Based on my M13 findings, I consider retaining employee proficiencies as a latent construct and using Q32 as an observed measure of processing promptness.
+
+| Variable | Description | Role |
+|:-----------------------|:-----------------------|:-----------------------|
+| Q3 | Employee courtesy | Indicator |
+| Q4 | Employee helpfulness | Indicator |
+| Q5 | Employee professionalism | Indicator |
+| Q6 | Employee availability | Indicator |
+| Employee proficiencies | Attitudes toward employee proficiencies | Latent construct |
+| Q32 | Loan-processing promptness | Observed intermediate variable |
+| Q37r | Overall managerial and operational efficiency | Observed outcome |
+| Q27 | Current loan status | Observed control |
+| Q38 | Headquarters-area residence | Observed predictor and control |
+
+The proposed model therefore includes one latent construct and four observed single-item variables.
+
+The measurement evidence supporting this specification is examined before the structural analysis.
+
+# Data Preparation
+
+## Load Packages and Import Data
+
+```{r}
+library(haven)
+library(dplyr)
+library(knitr)
+library(psych)
+library(lavaan)
+
+dat <- read_sav("Case 31 Data_efcu_1.sav")
+
+names(dat) <- tolower(names(dat))
+
+dim(dat)
+names(dat)
+```
+
+The dataset contains 128 respondents and 34 variables.
+
+I use the original questionnaire items rather than the previously calculated employee-performance composite because the latent construct is estimated directly from its indicators.
+
+## Inspect Variable Coding
+
+```{r}
+raw_items <- c(
+  "q3", "q4", "q5", "q6",
+  "q9", "q10", "q11", "q12",
+  "q27", "q31", "q32", "q33",
+  "q34", "q37", "q38"
+)
+
+lapply(dat[raw_items], function(x) attr(x, "labels"))
+
+lapply(dat[raw_items], function(x) {
+  table(as.numeric(x), useNA = "ifany")
+})
+```
+
+Q3–Q6 and Q31–Q34 use five-point agreement scales. Higher values indicate more favorable evaluations.
+
+Q37 uses a different direction, where 1 represents excellent and 5 represents very poor. Q27 and Q38 use 1 for yes and 2 for no.
+
+## Reverse Coding and Recoding
+
+```{r}
+d <- as.data.frame(lapply(dat[raw_items], as.numeric))
+
+d$q9r <- 6 - d$q9
+
+d$q12[d$q12 == 3] <- NA
+
+d$q37[d$q37 == 6] <- NA
+
+d$q37r <- 6 - d$q37
+
+d$loan_status <- ifelse(d$q27 == 1, 1, 0)
+
+d$residence <- ifelse(d$q38 == 1, 1, 0)
+```
+
+I reverse-code Q9 for consistency with M13, although receiving statements more frequently does not necessarily represent a better service experience.
+
+Q12 contains 22 responses coded as 3. My previous measurement assessment treated this category as "No answer," although the supplied SPSS value labels identify only the yes and no categories. Consistent with M13, I treat these responses as missing.
+
+Q37 is reverse-coded so that higher values indicate better overall evaluations. No-opinion responses are excluded from the substantive rating scale.
+
+For loan status, 1 represents members with a current loan and 0 represents those without one. For residence, 1 represents members living in the headquarters area and 0 represents those living elsewhere.
+
+```{r}
+table(d$q27, d$loan_status, useNA = "ifany")
+
+table(d$q38, d$residence, useNA = "ifany")
+
+table(d$q37, d$q37r, useNA = "ifany")
+```
+
+## Descriptive Statistics and Missing Values
+
+```{r}
+items <- c(
+  "q3", "q4", "q5", "q6",
+  "q9r", "q10", "q11", "q12",
+  "q31", "q32", "q33", "q34",
+  "q37r", "loan_status", "residence"
+)
+
+descriptive_table <- data.frame(
+  Variable = items,
+  Valid = sapply(d[items], function(x) sum(!is.na(x))),
+  Missing = sapply(d[items], function(x) sum(is.na(x))),
+  Mean = sapply(d[items], function(x) mean(x, na.rm = TRUE)),
+  SD = sapply(d[items], function(x) sd(x, na.rm = TRUE))
+)
+
+kable(
+  descriptive_table,
+  digits = 3,
+  row.names = FALSE,
+  caption = "Descriptive Statistics and Missing Values"
+)
+```
+
+Among the 128 respondents, 58 have a current loan and 57 live in the headquarters area.
+
+Q37r contains seven missing observations. I use full information maximum likelihood (FIML) to retain available information from respondents with incomplete data.
+
+Another concern from the descriptive results is that 125 respondents answered yes to Q11. With so little variation, the item may have difficulty distinguishing members with different operational evaluations.
+
+# Proposed Structural Model
+
+```{mermaid}
+flowchart LR
+  E([Employee Proficiencies])
+
+  E --> Q3[Q3 Courtesy]
+  E --> Q4[Q4 Helpfulness]
+  E --> Q5[Q5 Professionalism]
+  E --> Q6[Q6 Availability]
+
+  Q3 <-->|Residual covariance| Q4
+
+  E -->|a: P1| P[Q32 Processing Promptness]
+  P -->|b: H5b| Y[Q37r Overall Efficiency]
+  E -->|c-prime: P2| Y
+
+  L[Q27 Loan Status] -.-> P
+  L -.-> Y
+
+  R[Q38 Residence] -.-> E
+  R -.-> P
+  R -.-> Y
+```
+
+The bidirectional connection between Q3 and Q4 represents the residual covariance identified during the M13 measurement assessment. Dashed directional arrows represent contextual predictors and controls.
+
+The ellipse represents the latent construct, while rectangles represent observed variables.
+
+The main relationship of interest is whether employee proficiencies are associated with overall efficiency directly or indirectly through loan-processing promptness.
+
+Loan status and residence are included to account for differences in members' circumstances.
+
+# R/lavaan Analysis
+
+## Step 1: Measurement Model Assessment
+
+### Original Two-Factor CFA
+
+Before estimating the structural model, I reproduce the original CFA from M13.
+
+```{r}
+original_model <- '
+  Employee_Proficiencies =~ q3 + q4 + q5 + q6
+
+  Operational_Effectiveness =~ q9r + q10 + q11 + q12 +
+                               q31 + q32 + q33 + q34
+'
+
+fit_original <- cfa(
+  original_model,
+  data = d,
+  estimator = "ML",
+  missing = "fiml",
+  std.lv = TRUE
+)
+```
+
+### Overall Model Fit
+
+```{r}
+fit_names <- c(
+  "chisq", "df", "pvalue",
+  "cfi", "tli", "rmsea",
+  "rmsea.ci.lower", "rmsea.ci.upper", "srmr"
+)
+
+fitMeasures(fit_original, fit_names)
+```
+
+| Fit statistic      | General guideline             |
+|:-------------------|:------------------------------|
+| Chi-square p-value | Greater than .05 is desirable |
+| CFI                | ≥ .90; preferably ≥ .95       |
+| TLI                | ≥ .90                         |
+| RMSEA              | ≤ .08                         |
+| SRMR               | ≤ .08                         |
+
+The original two-factor model does not fit the data particularly well. The chi-square test is significant, $\chi^2(53) = 128.253$, p \< .001.
+
+CFI (.812) and TLI (.766) fall below the usual guidelines, while RMSEA (.105) and SRMR (.086) are higher than desired.
+
+These results are consistent with the measurement concerns identified in M13.
+
+### Standardized Factor Loadings
+
+```{r}
+original_loadings <- standardizedSolution(fit_original) |>
+  filter(op == "=~") |>
+  select(lhs, rhs, est.std, se, ci.lower, ci.upper, pvalue)
+
+kable(
+  original_loadings,
+  digits = 3,
+  caption = "Standardized Factor Loadings"
+)
+```
+
+The employee-proficiency loadings range from .739 to .910. All four exceed .70, suggesting that the indicators represent their intended construct reasonably well.
+
+The operational indicators perform less consistently. Q32 has the strongest absolute loading (.631), followed by Q33 (.470).
+
+Q12 has a particularly weak loading (.080, p = .544). Although confidentiality is important to the credit union, the responses to this item do not closely follow members' other operational evaluations.
+
+The negative loadings for Q10 and Q11 should also be considered in relation to their original coding directions.
+
+### Reliability and Convergent Validity
+
+```{r}
+employee_alpha <- psych::alpha(d[c("q3", "q4", "q5", "q6")])
+
+operational_alpha <- psych::alpha(d[c("q31", "q32", "q33", "q34")])
+
+employee_alpha$total$raw_alpha
+operational_alpha$total$raw_alpha
+```
+
+The employee items have a Cronbach's alpha of .866, compared with .472 for Q31–Q34. This is consistent with my previous reliability analysis.
+
+The operational alpha refers to the four agreement-scale items rather than the complete eight-item construct.
+
+I also examine composite reliability (CR) and average variance extracted (AVE), following the approach used in M13.
+
+For the models containing the Q3–Q4 residual covariance, I include that covariance in the reliability calculation. Since the standardized covariance output represents a residual correlation by default, I convert it to a covariance using the standardized residual variances before adding it to the error variance.
+
+```{r}
+calculate_validity <- function(
+    fitted_model,
+    factor_name,
+    reverse_items = character(),
+    correlated = FALSE) {
+
+  x <- standardizedSolution(fitted_model) |>
+    filter(op == "=~", lhs == factor_name)
+
+  lambda <- x$est.std
+
+  lambda[x$rhs %in% reverse_items] <-
+    -lambda[x$rhs %in% reverse_items]
+
+  error <- 1 - lambda^2
+
+  error_total <- sum(error)
+
+  if (correlated) {
+
+    residual <- standardizedSolution(fitted_model) |>
+      filter(op == "~~", lhs == "q3", rhs == "q4")
+
+    rho <- residual$est.std
+
+    error_q3 <- error[x$rhs == "q3"]
+    error_q4 <- error[x$rhs == "q4"]
+
+    residual_covariance <- rho * sqrt(error_q3 * error_q4)
+
+    error_total <- sum(error) + 2 * residual_covariance
+  }
+
+  cr <- sum(lambda)^2 / (sum(lambda)^2 + error_total)
+
+  ave <- mean(lambda^2)
+
+  data.frame(
+    Construct = factor_name,
+    CR = cr,
+    AVE = ave,
+    Square_Root_AVE = sqrt(ave)
+  )
+}
+
+original_validity <- bind_rows(
+  calculate_validity(
+    fit_original,
+    "Employee_Proficiencies"
+  ),
+  calculate_validity(
+    fit_original,
+    "Operational_Effectiveness",
+    reverse_items = c("q10", "q11", "q12")
+  )
+)
+
+kable(
+  original_validity,
+  digits = 3,
+  caption = "Composite Reliability and Convergent Validity"
+)
+```
+
+Employee proficiencies demonstrate satisfactory composite reliability (CR = .873) and convergent validity (AVE = .635).
+
+Operational effectiveness has a much lower CR (.485) and AVE (.139), both below the recommended levels of .70 and .50.
+
+The low AVE is particularly concerning because the operational factor explains only about 13.9% of its indicators' variance on average.
+
+Given the different response formats and content of the operational questions, I would not recommend treating all eight items as one reliable scale.
+
+### Discriminant Validity
+
+```{r}
+factor_cor <- lavInspect(fit_original, "cor.lv")
+
+factor_cor
+
+correlation <- factor_cor[
+  "Employee_Proficiencies",
+  "Operational_Effectiveness"
+]
+
+discriminant_table <- data.frame(
+  Construct = original_validity$Construct,
+  Square_Root_AVE = original_validity$Square_Root_AVE,
+  Factor_Correlation = abs(correlation)
+)
+
+kable(
+  discriminant_table,
+  digits = 3,
+  caption = "Discriminant Validity Comparison"
+)
+```
+
+The correlation between employee proficiencies and operational effectiveness is .662.
+
+For employee proficiencies, the square root of AVE (.797) exceeds the factor correlation. However, operational effectiveness has a square root of AVE of only .373.
+
+Therefore, the original two-factor model does not satisfy the Fornell-Larcker criterion for both constructs.
+
+Together with the weak reliability and convergent validity, this gives me another reason not to retain operational effectiveness in its original form.
+
+### Selection of Q32
+
+```{r}
+operational_loadings <- original_loadings |>
+  filter(lhs == "Operational_Effectiveness") |>
+  mutate(Absolute_Loading = abs(est.std)) |>
+  arrange(desc(Absolute_Loading)) |>
+  select(
+    Indicator = rhs,
+    Loading = est.std,
+    Absolute_Loading,
+    pvalue
+  )
+
+kable(
+  operational_loadings,
+  digits = 3,
+  caption = "Comparison of Operational Indicators"
+)
+```
+
+Following Dr. Jung's clarification, I select Q32 based on both theoretical and empirical considerations.
+
+**Empirical justification:** Q32 has the strongest standardized loading among the eight operational indicators (.631, p \< .001). Although it does not reach the preferred .70 guideline, it is the only operational indicator with an absolute loading above .50.
+
+**Theoretical justification:** Q32 asks whether the credit union is prompt in processing loan applications. Timely processing reflects one aspect of how efficiently the credit union delivers its financial services and directly corresponds to H5b.
+
+Q33 is conceptually closer to the broader definition of operational effectiveness because it asks whether the credit union's financial services meet members' needs. However, its standardized loading (.470) is considerably weaker than that of Q32 (.631). Given my focus on loan-processing promptness and overall efficiency, I consider Q32 the more appropriate choice for this structural model.
+
+I use Q32 as a single observed variable rather than combining it with other operational indicators. Its meaning is directly relevant to the proposed structural relationships, but it measures perceived loan-processing promptness rather than operational effectiveness as a whole.
+
+## Reassessment of Employee Proficiencies
+
+### Original Four-Item CFA
+
+```{r}
+employee_model <- '
+  Employee_Proficiencies =~ q3 + q4 + q5 + q6
+'
+
+fit_employee <- cfa(
+  employee_model,
+  data = d,
+  estimator = "ML",
+  missing = "fiml",
+  std.lv = TRUE
+)
+
+summary(
+  fit_employee,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+```{r}
+employee_quality <- calculate_validity(
+  fit_employee,
+  "Employee_Proficiencies"
+)
+
+kable(employee_quality, digits = 3)
+```
+
+After removing the operational factor, employee proficiencies continue to demonstrate strong loadings, ranging from .726 to .927. Composite reliability (.872) and AVE (.633) also exceed the recommended levels.
+
+However, the overall fit remains mixed. CFI (.963) and SRMR (.034) are favorable, but TLI (.890) is slightly below the guideline, and RMSEA (.195) remains high.
+
+The problem appears to be the way the model represents relationships among the four indicators rather than a lack of individual item reliability.
+
+### Modification Indices and Residuals
+
+```{r}
+modindices(fit_employee, sort. = TRUE)
+
+lavResiduals(fit_employee, type = "cor")$cov
+```
+
+I examine the modification indices to understand whether some indicators share additional variance beyond the common factor.
+
+Courtesy and helpfulness both describe the interpersonal side of members' experiences. During the same interaction, a member who finds an employee helpful may also perceive that employee as courteous.
+
+This gives me a theoretical reason to examine a residual covariance between Q3 and Q4 rather than removing an otherwise relevant indicator.
+
+### Revised Employee-Proficiency CFA
+
+```{r}
+revised_model <- '
+  Employee_Proficiencies =~ q3 + q4 + q5 + q6
+
+  q3 ~~ q4
+'
+
+fit_revised <- cfa(
+  revised_model,
+  data = d,
+  estimator = "ML",
+  missing = "fiml",
+  std.lv = TRUE
+)
+
+summary(
+  fit_revised,
+  fit.measures = TRUE,
+  standardized = TRUE
+)
+```
+
+### Comparison of Measurement Models
+
+```{r}
+fit_comparison <- data.frame(
+  Statistic = fit_names,
+  Two_Factor = as.numeric(fitMeasures(fit_original, fit_names)),
+  Employee_Original = as.numeric(fitMeasures(fit_employee, fit_names)),
+  Employee_Revised = as.numeric(fitMeasures(fit_revised, fit_names))
+)
+
+kable(
+  fit_comparison,
+  digits = 3,
+  caption = "Measurement Model Fit Comparison"
+)
+```
+
+```{r}
+chisq_difference <-
+  fitMeasures(fit_employee, "chisq") -
+  fitMeasures(fit_revised, "chisq")
+
+df_difference <-
+  fitMeasures(fit_employee, "df") -
+  fitMeasures(fit_revised, "df")
+
+chisq_difference
+
+df_difference
+
+pchisq(
+  chisq_difference,
+  df = df_difference,
+  lower.tail = FALSE
+)
+```
+
+Allowing the Q3 and Q4 residuals to correlate improves the four-item model. The chi-square statistic decreases from 11.697 to 3.683, and the difference is statistically significant, $\Delta\chi^2(1) = 8.014$, p = .0046.
+
+CFI increases from .963 to .990, TLI increases from .890 to .939, and SRMR decreases from .034 to .018.
+
+The revised chi-square test is also non-significant at the .05 level (p = .055).
+
+However, RMSEA remains elevated at .145. The revised model has only one degree of freedom, and the RMSEA confidence interval is wide, ranging from .000 to .315.
+
+This makes me cautious about relying on RMSEA alone, but I would not ignore the remaining fit concern.
+
+The two-factor and one-factor models contain different observed indicators, so I compare their fit descriptively rather than treating them as nested models. The chi-square difference test is applied only to the original and revised four-item employee models.
+
+### Factor Loadings and Measurement Quality
+
+```{r}
+loading_comparison <- bind_rows(
+  Original = standardizedSolution(fit_employee),
+  Revised = standardizedSolution(fit_revised),
+  .id = "Model"
+) |>
+  filter(op == "=~") |>
+  select(Model, rhs, est.std)
+
+kable(
+  loading_comparison,
+  digits = 3,
+  caption = "Employee-Proficiency Factor Loadings"
+)
+```
+
+```{r}
+revised_quality <- calculate_validity(
+  fit_revised,
+  "Employee_Proficiencies",
+  correlated = TRUE
+)
+
+quality_comparison <- bind_rows(
+  Original = employee_quality,
+  Revised = revised_quality,
+  .id = "Model"
+)
+
+kable(
+  quality_comparison,
+  digits = 3,
+  caption = "Employee-Proficiency Reliability and Validity"
+)
+```
+
+The revised loadings range from .650 to .848. Q4 remains the strongest indicator, while Q3 has the weakest loading.
+
+Although the loading of Q3 decreases after accounting for its shared residual variance with Q4, courtesy remains a meaningful part of employee proficiencies.
+
+The revised composite reliability is `r round(revised_quality$CR, 3)`, and AVE is `r round(revised_quality$AVE, 3)`. Both remain above the recommended levels.
+
+I therefore retain all four employee items rather than removing one solely to improve model fit.
+
+### Model Admissibility
+
+```{r}
+lavInspect(fit_original, "converged")
+lavInspect(fit_original, "post.check")
+
+lavInspect(fit_employee, "converged")
+lavInspect(fit_employee, "post.check")
+
+lavInspect(fit_revised, "converged")
+lavInspect(fit_revised, "post.check")
+```
+
+All three CFA models converge and pass the post-estimation admissibility checks.
+
+## Measurement-Model Decision
+
+Based on the measurement results, I do not retain the original operational-effectiveness factor. Q32 is used instead as an observed measure of processing promptness.
+
+For employee proficiencies, I retain Q3–Q6 and allow the residuals of courtesy and helpfulness to correlate.
+
+The revised factor demonstrates satisfactory loadings, reliability, and convergent validity. Most global fit indices also improve, although RMSEA remains higher than desired.
+
+Since the revision was identified and evaluated using the same sample, I consider the following structural analysis exploratory.
+
+This measurement decision does not establish that every measurement requirement has been fully satisfied. Further validation of the revised model would be necessary before treating the structural findings as confirmatory evidence.
+
+## Step 2: Structural Model Estimation
+
+### Combined Measurement and Structural Model
+
+```{r}
+sem_model <- '
+  Employee_Proficiencies =~ q3 + q4 + q5 + q6
+
+  q3 ~~ q4
+
+  Employee_Proficiencies ~ r_emp*residence
+
+  q32 ~ a*Employee_Proficiencies +
+        l_prompt*loan_status +
+        r_prompt*residence
+
+  q37r ~ b*q32 +
+         cprime*Employee_Proficiencies +
+         l_overall*loan_status +
+         r_overall*residence
+
+  indirect := a*b
+
+  total := cprime + a*b
+'
+```
+
+The model retains the revised employee-proficiency measurement specification and adds structural relationships involving Q32, Q37r, loan status, and residence.
+
+I use maximum likelihood estimation with FIML, consistent with my M13 assessment. The rating-scale variables are treated as approximately continuous.
+
+All respondents have valid values for loan status and residence, so no observations need to be excluded because of missing exogenous predictors.
+
+```{r}
+fit_sem <- sem(
+  sem_model,
+  data = d,
+  estimator = "ML",
+  missing = "fiml",
+  std.lv = TRUE
+)
+
+summary(
+  fit_sem,
+  fit.measures = TRUE,
+  standardized = TRUE,
+  rsquare = TRUE,
+  ci = TRUE
+)
+```
+
+```{r}
+lavInspect(fit_sem, "converged")
+
+lavInspect(fit_sem, "post.check")
+
+lavInspect(fit_sem, "nobs")
+```
+
+The structural model converges successfully, passes the admissibility check, and retains all 128 respondents.
+
+# Results
+
+## Measurement-Model Review
+
+```{r}
+sem_loadings <- standardizedSolution(fit_sem) |>
+  filter(op == "=~") |>
+  select(rhs, est.std, se, ci.lower, ci.upper, pvalue)
+
+kable(
+  sem_loadings,
+  digits = 3,
+  caption = "Standardized Loadings in the Combined SEM"
+)
+```
+
+```{r}
+sem_quality <- calculate_validity(
+  fit_sem,
+  "Employee_Proficiencies",
+  correlated = TRUE
+)
+
+kable(
+  sem_quality,
+  digits = 3,
+  caption = "Measurement Quality in the Combined SEM"
+)
+```
+
+The standardized employee-proficiency loadings range from .617 to .864 in the combined model. Helpfulness (Q4) remains the strongest indicator.
+
+Composite reliability is `r round(sem_quality$CR, 3)`, and AVE is `r round(sem_quality$AVE, 3)`.
+
+The indicators retain satisfactory reliability and convergent validity after the structural relationships are introduced.
+
+Since the final model contains only one latent construct, a between-factor correlation and discriminant-validity comparison are no longer applicable. The operational indicators were evaluated separately during the original two-factor CFA in M13.
+
+## Overall Structural Model Fit
+
+```{r}
+structural_fit <- fitMeasures(fit_sem, fit_names)
+
+kable(
+  data.frame(
+    Statistic = names(structural_fit),
+    Value = as.numeric(structural_fit)
+  ),
+  digits = 3,
+  caption = "Structural Model Fit"
+)
+```
+
+| Fit statistic      | Result | Guideline |
+|:-------------------|-------:|:----------|
+| Chi-square p-value |   .379 | \> .05    |
+| CFI                |   .997 | ≥ .95     |
+| TLI                |   .994 | ≥ .90     |
+| RMSEA              |   .023 | ≤ .08     |
+| SRMR               |   .031 | ≤ .08     |
+
+The combined model fits the observed data well according to the major fit indices. The chi-square test is non-significant, $\chi^2(14) = 14.988$, p = .379.
+
+Although RMSEA is only .023, its 90% confidence interval extends to .090, suggesting some uncertainty about population fit.
+
+The favorable overall fit is encouraging, but it does not remove the limitations identified during the standalone CFA assessment.
+
+## Explained Variance
+
+```{r}
+r2 <- lavInspect(fit_sem, "r2")
+
+r2_table <- data.frame(
+  Variable = names(r2),
+  R_Squared = as.numeric(r2)
+) |>
+  filter(Variable %in% c(
+    "Employee_Proficiencies",
+    "q32",
+    "q37r"
+  ))
+
+kable(
+  r2_table,
+  digits = 3,
+  caption = "Explained Variance"
+)
+```
+
+The model explains 44.2% of the variance in overall managerial and operational efficiency.
+
+Employee proficiencies, loan status, and residence explain 23.2% of the variance in perceived processing promptness.
+
+Residence alone explains only 1.6% of the variance in employee proficiencies. This suggests that living in the headquarters area provides relatively little information about how members evaluate employees.
+
+## Hypothesis Testing
+
+```{r}
+ss <- standardizedSolution(fit_sem) |>
+  filter(op == "~" | op == ":=")
+
+hypothesis_table <- ss |>
+  select(
+    lhs,
+    rhs,
+    label,
+    est.std,
+    se,
+    ci.lower,
+    ci.upper,
+    pvalue
+  )
+
+kable(
+  hypothesis_table,
+  digits = 3,
+  caption = "Standardized Structural Estimates"
+)
+```
+
+The following table summarizes the hypothesis decisions based on the standardized estimates and their corresponding uncertainty.
+
+| Hypothesis | Structural relationship | Expected | Beta | SE | 95% CI | p-value | Decision | Interpretation |
+|:-------|:-------|:-------|-------:|-------:|:-------|:-------|:-------|:-------|
+| P1 | Employee proficiencies → Q32 | Positive | .474 | .077 | \[.323, .625\] | \< .001 | Supported | Positive association |
+| H5b | Q32 → Q37r | Positive | .145 | .083 | \[-.017, .307\] | .079 | Not supported | Not significant |
+| P2 | Employee proficiencies → Q37r | Positive | .564 | .081 | \[.405, .724\] | \< .001 | Supported | Positive association |
+| P3 | Employee proficiencies → Q32 → Q37r | Positive | .069 | .039 | \[-.008, .146\] | .081 | Not supported | Indirect association not significant |
+| R4a | Residence → Employee proficiencies | Non-directional | .125 | .094 | \[-.058, .309\] | .180 | No clear evidence | Not significant |
+| R4c | Residence → Q32 | Non-directional | -.116 | .081 | \[-.275, .042\] | .149 | No clear evidence | Not significant |
+| Extension of R4c | Residence → Q37r | Non-directional | -.165 | .073 | \[-.308, -.022\] | .024 | Evidence of association | Negative association |
+| Control | Loan status → Q32 | Non-directional | -.096 | .080 | \[-.254, .061\] | .230 | No clear evidence | Not significant |
+| Control | Loan status → Q37r | Non-directional | -.150 | .072 | \[-.291, -.010\] | .036 | Evidence of association | Negative association |
+
+The directional propositions are evaluated at the .05 significance level. Because the measurement specification remains exploratory, these are coefficient-level decisions rather than independently validated confirmatory findings.
+
+### P1: Employee Proficiencies and Processing Promptness
+
+Employee proficiencies have a significant positive relationship with perceived loan-processing promptness ($\beta = .474$, p \< .001), supporting P1.
+
+Members who evaluate employees more favorably also tend to believe that loan applications are processed promptly. This is reasonable because interactions with employees may shape how members experience the application process.
+
+### H5b: Processing Promptness and Overall Efficiency
+
+The relationship between processing promptness and overall efficiency is positive but not statistically significant ($\beta = .145$, p = .079). Therefore, H5b is not supported in the current SEM.
+
+This is one of the more interesting findings because H5b was supported in my previous multiple regression analysis, where the standardized coefficient was .308.
+
+One possible explanation is that employee evaluations and processing promptness capture overlapping aspects of members' service experiences. However, the two models contain different predictors, so I cannot attribute the change entirely to the introduction of employee proficiencies.
+
+The finding does not mean that processing speed is unimportant. It means that its unique relationship with overall efficiency is less clear after accounting for the other variables in this model.
+
+### P2: Employee Proficiencies and Overall Efficiency
+
+Employee proficiencies have a significant positive direct association with overall managerial and operational efficiency ($\beta = .564$, p \< .001).
+
+P2 is supported, and employee proficiencies have the strongest standardized coefficient among the direct predictors of Q37r.
+
+This suggests that members' interactions with employees are closely related to their overall impressions of the credit union, even after accounting for processing promptness.
+
+### Residence and Current Loan Status
+
+Residence is not significantly associated with employee proficiencies (p = .180) or processing promptness (p = .149).
+
+However, it has a significant negative direct association with overall efficiency ($\beta = -.165$, p = .024).
+
+Current loan status shows a similar pattern. Its relationship with processing promptness is not significant, but its association with overall efficiency is negative and statistically significant ($\beta = -.150$, p = .036).
+
+To understand these differences on the original outcome scale, I also examine the unstandardized estimates.
+
+```{r}
+pe <- parameterEstimates(
+  fit_sem,
+  standardized = TRUE,
+  ci = TRUE
+)
+
+unstandardized_table <- pe |>
+  filter(op == "~") |>
+  select(lhs, rhs, est, se, ci.lower, ci.upper, pvalue)
+
+kable(
+  unstandardized_table,
+  digits = 3,
+  caption = "Unstandardized Structural Coefficients"
+)
+```
+
+Members with current loans provide overall efficiency ratings approximately .220 points lower than members without current loans, after accounting for the other predictors.
+
+Similarly, members living in the headquarters area provide adjusted ratings approximately .242 points lower than those living elsewhere.
+
+These results identify differences worth investigating but do not explain why the groups evaluate the credit union differently.
+
+## Final Estimated Structural Model
+
+```{mermaid}
+flowchart LR
+  E([Employee Proficiencies])
+
+  E -->|.617| Q3[Q3 Courtesy]
+  E -->|.864| Q4[Q4 Helpfulness]
+  E -->|.777| Q5[Q5 Professionalism]
+  E -->|.801| Q6[Q6 Availability]
+
+  Q3 <-.->|.471| Q4
+
+  E -->|.474| P[Q32 Processing Promptness]
+  P -.->|.145| Y[Q37r Overall Efficiency]
+  E -->|.564| Y
+
+  L[Q27 Loan Status] -.->|-.096| P
+  L -->|-.150| Y
+
+  R[Q38 Residence] -.->|.125| E
+  R -.->|-.116| P
+  R -->|-.165| Y
+```
+
+The diagram displays the fully standardized structural coefficients and factor loadings.
+
+Solid structural arrows indicate statistically significant relationships at the .05 level, while dashed directional arrows indicate non-significant relationships.
+
+The bidirectional connection between Q3 and Q4 represents their residual correlation (.471), not a structural regression coefficient.
+
+## Direct, Indirect, and Total Effects
+
+```{r}
+standardized_effects <- ss |>
+  filter(label == "cprime" | op == ":=") |>
+  select(label, est.std, se, ci.lower, ci.upper, pvalue)
+
+kable(
+  standardized_effects,
+  digits = 3,
+  caption = "Standardized Direct, Indirect, and Total Effects"
+)
+```
+
+```{r}
+unstandardized_effects <- pe |>
+  filter(label == "cprime" | op == ":=") |>
+  select(label, est, se, ci.lower, ci.upper, pvalue)
+
+kable(
+  unstandardized_effects,
+  digits = 3,
+  caption = "Unstandardized Direct, Indirect, and Total Effects"
+)
+```
+
+The indirect and total effects can also be verified using the estimated unstandardized coefficients.
+
+```{r}
+a <- pe$est[pe$label == "a"]
+
+b <- pe$est[pe$label == "b"]
+
+cprime <- pe$est[pe$label == "cprime"]
+
+a * b
+
+cprime + a * b
+```
+
+| Effect   | Standardized estimate | 95% CI          | p-value |
+|:---------|----------------------:|:----------------|:--------|
+| Direct   |                  .564 | \[.405, .724\]  | \< .001 |
+| Indirect |                  .069 | \[-.008, .146\] | .081    |
+| Total    |                  .633 | \[.508, .759\]  | \< .001 |
+
+### Direct Effect
+
+The direct relationship between employee proficiencies and overall efficiency is positive and statistically significant (.564, p \< .001).
+
+Employee evaluations remain closely associated with overall efficiency even after processing promptness is taken into account.
+
+### Indirect Effect
+
+The indirect association through processing promptness is .069, with a 95% confidence interval of \[-.008, .146\].
+
+Since the confidence interval includes zero and the p-value is .081, P3 is not supported.
+
+Although employee proficiencies are positively associated with processing promptness, the results do not provide sufficient evidence that processing promptness explains the relationship between employee proficiencies and overall efficiency.
+
+### Total Effect
+
+The standardized total effect combines the direct and indirect components:
+
+$$
+0.564 + 0.069 = 0.633
+$$
+
+The total association is positive and statistically significant (p \< .001).
+
+Overall, the findings suggest that employee evaluations have a stronger direct relationship with overall efficiency than the proposed indirect relationship through loan-processing promptness.
+
+The confidence intervals are based on the maximum likelihood estimates and delta-method standard errors for the defined effects.
+
+## Limited Theory-Based Model Review
+
+```{r}
+modindices(fit_sem, sort. = TRUE) |>
+  head(10)
+```
+
+```{r}
+lavResiduals(fit_sem, type = "cor")$cov
+```
+
+The largest modification indices suggest additional residual relationships between Q3 and Q5 (MI = 6.958) and between Q4 and Q37r (MI = 5.159).
+
+I do not add these relationships because the combined model already demonstrates favorable overall fit, and the suggested parameters would require further theoretical justification.
+
+In particular, allowing an employee indicator to share residual variance with the overall efficiency outcome could make the distinction between measurement and structural relationships less clear.
+
+I retain the existing specification rather than repeatedly modifying the model using the same sample.
+
+# Interpretation, Managerial Meaning, and Limitations
+
+## Managerial Implications
+
+The strongest finding for EFCU is the relationship between employee proficiencies and overall managerial and operational efficiency.
+
+Members may form their impressions of the credit union partly through their everyday interactions with employees. For example, receiving clear explanations, timely assistance, and professional service may contribute to a more favorable overall experience.
+
+EFCU could examine employee availability, responsiveness, and the quality of assistance members receive, particularly during financial service and loan-related interactions.
+
+Processing promptness is also related to employee evaluations, although its unique relationship with overall efficiency is not statistically significant in this model. I would not interpret this as a reason for management to ignore processing speed.
+
+Instead, it may be useful to collect actual loan-processing times and compare them with members' subjective evaluations. This could help distinguish operational delays from communication or service-related concerns.
+
+The lower adjusted overall ratings among current loan holders and headquarters-area residents also deserve further attention. EFCU could investigate whether these members have different service experiences or expectations that are not captured in the present survey.
+
+## Measurement Limitations
+
+The original operational-effectiveness factor has weak reliability and validity. Replacing it with Q32 allows me to examine a more specific operational characteristic, but it narrows the scope of the analysis.
+
+Q32 also has a loading of .631 in the original CFA, below the preferred .70 guideline. Therefore, it should not be described as an ideal measure of the broader operational construct.
+
+The measurement errors of Q32 and Q37r are not separately estimated because they are included as observed single-item variables.
+
+The revised employee-proficiency factor demonstrates favorable reliability and convergent validity, but the standalone CFA still has mixed fit. Its residual covariance was also identified using the current sample.
+
+These concerns limit the extent to which the structural results can be treated as confirmatory findings.
+
+## Sample Size and Estimation
+
+The sample of 128 respondents is relatively modest for SEM. Several questionnaire items also have limited response variation, with employee evaluations concentrated toward the favorable end of the scales.
+
+Maximum likelihood estimation treats the rating responses as approximately continuous, which may not fully reflect their ordinal measurement properties.
+
+FIML allows partially incomplete observations to contribute to the estimates under its missing-data assumptions, but it does not automatically remove missing-data bias.
+
+## Research Design and Scope
+
+The data were collected through a cross-sectional survey. Consequently, the direction of the proposed relationships cannot be established from the observed associations alone.
+
+Members' general attitudes toward the credit union, common method bias, and other unmeasured service characteristics may also influence the results.
+
+The current model addresses selected relationships involving employee evaluations, processing promptness, and overall efficiency. It does not directly explain why members borrow from other financial institutions.
+
+A more comprehensive model of borrowing behavior would need to consider loan rates, available financial products, borrowing decisions, and members' experiences with competing institutions.
+
+# Conclusion
+
+This assignment builds on my M13 measurement assessment and previous Case 31 analyses.
+
+The original operational-effectiveness factor does not demonstrate adequate reliability or validity. Following Dr. Jung's clarification, I retain employee proficiencies as a latent construct and use Q32 as an observed measure of perceived loan-processing promptness.
+
+The combined structural model demonstrates favorable overall fit and explains 44.2% of the variance in overall managerial and operational efficiency.
+
+P1 and P2 are supported at the coefficient level, indicating that employee proficiencies are positively associated with both perceived processing promptness and overall efficiency.
+
+However, H5b and P3 are not supported. Unlike the previous regression analysis, processing promptness is not a statistically significant unique predictor of overall efficiency in the current SEM.
+
+For EFCU, employee interactions appear to be particularly relevant to understanding members' overall evaluations. The differences associated with current loan status and residence also identify potential areas for further investigation.
+
+Given the remaining measurement concerns and the cross-sectional research design, I consider these findings exploratory. A larger independent sample, more focused measures of operational effectiveness, and actual loan-processing records would help strengthen the analysis.
+
+# References
+
+Anderson, J. C., & Gerbing, D. W. (1988). Structural equation modeling in practice: A review and recommended two-step approach. *Psychological Bulletin, 103*(3), 411–423. https://doi.org/10.1037/0033-2909.103.3.411
+
+Case 31. *Employees Federal Credit Union*.
+
+Case 31. *Construct and Measurement Table Assignment: Hypotheses Assignment Key*.
+
+Case 31. *Construct and Measurement Table Assignment: Research Questions Assignment Key*.
+
+Jung, J. (2026). *M13 and M15 Assignment Clarification*. Course announcement.
+
+Luo, X. (2026). *Structural Equation Modeling in R: Study Note*.
+
+Luo, X. (2026). *Case 31 Measurement Model Assessment*.
+
+Luo, X. (2026). *Case 31 Reliability and Factor Analysis*.
+
+Luo, X. (2026). *Case 31 Research Questions R3, R6, and R4*.
+
+Luo, X. (2026). *Case 31 Hypothesis Testing: H1 and H2*.
+
+Luo, X. (2026). *Case 31 Hypothesis Testing: H5a–H5d*.
+
+UCLA Statistical Methods and Data Analytics. *Introduction to Structural Equation Modeling (SEM) in R with lavaan*. https://stats.oarc.ucla.edu/r/seminars/rsem/
+
+# Appendix: Reproducibility and Publication Links
+
+- GitHub Repository
+
+- GitHub Pages
