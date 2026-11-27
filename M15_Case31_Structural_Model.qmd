@@ -127,7 +127,7 @@ The current model focuses on R3, selected aspects of R4 and R6, and H5b.
 My previous H5a–H5d multiple regression analysis examined how four operational characteristics relate to overall managerial and operational efficiency.
 
 | Hypothesis | Predictor                    | Standardized coefficient | p-value |
-|:---------------|:---------------------|-----------------:|:---------------|
+|:-----------|:-----------------------------|-------------------------:|:--------|
 | H5a        | Confidentiality (Q31)        |                     .188 | .036    |
 | H5b        | Processing promptness (Q32)  |                     .308 | \< .001 |
 | H5c        | Service adequacy (Q33)       |                     .294 | \< .001 |
@@ -152,7 +152,7 @@ Residence is included because R4 examines whether members living in the headquar
 ## Hypotheses and Planned Tests
 
 | Hypothesis or research question | Predictor | Outcome | Variable type | Expected relationship | Planned test |
-|:-----------|:-----------|:-----------|:-----------|:-----------|:-----------|
+|:---|:---|:---|:---|:---|:---|
 | P1 | Employee proficiencies | Q32 | Latent to observed | Positive | Structural path (a) |
 | H5b | Q32 | Q37r | Observed to observed | Positive | Structural path (b) |
 | P2 | Employee proficiencies | Q37r | Latent to observed | Positive | Direct effect (c') |
@@ -189,7 +189,7 @@ A member may be satisfied with the confidentiality of financial information but 
 Based on my M13 findings, I consider retaining employee proficiencies as a latent construct and using Q32 as an observed measure of processing promptness.
 
 | Variable | Description | Role |
-|:-----------------------|:-----------------------|:-----------------------|
+|:---|:---|:---|
 | Q3 | Employee courtesy | Indicator |
 | Q4 | Employee helpfulness | Indicator |
 | Q5 | Employee professionalism | Indicator |
@@ -959,7 +959,7 @@ kable(
 The following table summarizes the hypothesis decisions based on the standardized estimates and their corresponding uncertainty.
 
 | Hypothesis | Structural relationship | Expected | Beta | SE | 95% CI | p-value | Decision | Interpretation |
-|:-------|:-------|:-------|-------:|-------:|:-------|:-------|:-------|:-------|
+|:---|:---|:---|---:|---:|:---|:---|:---|:---|
 | P1 | Employee proficiencies → Q32 | Positive | .474 | .077 | \[.323, .625\] | \< .001 | Supported | Positive association |
 | H5b | Q32 → Q37r | Positive | .145 | .083 | \[-.017, .307\] | .079 | Not supported | Not significant |
 | P2 | Employee proficiencies → Q37r | Positive | .564 | .081 | \[.405, .724\] | \< .001 | Supported | Positive association |
@@ -1226,7 +1226,9 @@ Case 31. *Construct and Measurement Table Assignment: Hypotheses Assignment Key*
 
 Case 31. *Construct and Measurement Table Assignment: Research Questions Assignment Key*.
 
-Jung, J. (2026). *M13 and M15 Assignment Clarification*. Course announcement.
+Jung, J. (2026a). *Demo on Full SEM, Mediation-Moderation Concept, Mediation Test, Indirect/Total Effects*. Course lecture materials.
+
+Jung, J. (2026b). *M13 and M15 Assignment Clarification*. Course announcement.
 
 Luo, X. (2026). *Structural Equation Modeling in R: Study Note*.
 
@@ -1240,7 +1242,7 @@ Luo, X. (2026). *Case 31 Hypothesis Testing: H1 and H2*.
 
 Luo, X. (2026). *Case 31 Hypothesis Testing: H5a–H5d*.
 
-UCLA Statistical Methods and Data Analytics. *Introduction to Structural Equation Modeling (SEM) in R with lavaan*. https://stats.oarc.ucla.edu/r/seminars/rsem/
+UCLA Statistical Methods and Data Analytics. (n.d.). *Introduction to Structural Equation Modeling (SEM) in R with lavaan*. https://stats.oarc.ucla.edu/r/seminars/rsem/
 
 # Appendix: Reproducibility and Publication Links
 
